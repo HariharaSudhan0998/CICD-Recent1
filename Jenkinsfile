@@ -18,7 +18,7 @@ pipeline {
         echo 'Unit Test...'
      }
    } 
-    stage('Code Quality') {
+   /* stage('Code Quality') {
      steps {	    	    
            withSonarQubeEnv('sonarqube') {
 		     sh """ 		        
@@ -39,7 +39,7 @@ pipeline {
 	     
         echo 'Artifact Push...'
      }
-   }
+   }*/
    stage('Deploy to Test') {
 	      steps{
 		      
