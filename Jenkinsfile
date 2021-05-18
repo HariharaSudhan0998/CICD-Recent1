@@ -60,7 +60,13 @@ pipeline {
 		     }
    } 
      stage('Deploy to Production') {
-     steps {	     
+     steps {	
+	     script {
+             sshagent (credentials:['productionserver']) { 
+	     sh 'ssh -o StrictHostKeyChecking=no ec2-user@172.31.5.139 "killall -9 java; rm -rf gs-spring-boot-1.0.1.jar; ls -ltr; ps -ef |grep java ;"'		
+	     sh 'ssh -o StrictHostKeyChecking=no ec2-user@172.31.5.139 "pwd; ls -ltr; java -jar gs-spring-boot-1.0.1.jar 2>> /dev/null >> /dev/null &"; sleep 10; ps -ef |grep java'
+   }
+  }
 				    
         echo 'Deploy to Production...'
      }
