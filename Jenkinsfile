@@ -55,7 +55,7 @@ pipeline {
    }
      stage('Functional Test') {
      steps {       	
-	     sh(script: 'mvn clean install')
+	     sh(script: 'mvn clean ')
         echo 'Functional Test...'
 		     }
    } 
