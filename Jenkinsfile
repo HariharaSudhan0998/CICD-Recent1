@@ -31,15 +31,15 @@ pipeline {
         
         echo 'Code Quality...'
 	}
-   }
+   }*/
     stage('Artifact Push') {
      steps {	          
 	   //  sh(script: 'mvn  -version')
-             sh(script: 'mvn   deploy')
+             sh(script: 'mvn   deploy -Dtest=!SeleniumTest')
 	     
         echo 'Artifact Push...'
      }
-   }*/
+   }
    stage('Deploy to Test') {
 	      steps{
 		      
