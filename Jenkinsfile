@@ -55,7 +55,7 @@ pipeline {
    }
      stage('Functional Test') {
      steps {       	
-	     sh(script: 'mvn test')
+	     sh(script: 'mvn test -Dtest=!HelloControllerTest')
         echo 'Functional Test...'
 		     }
    } 
