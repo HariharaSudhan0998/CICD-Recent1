@@ -56,7 +56,7 @@ pipeline {
      stage('Functional Test') {
      steps {       	
 	   //  sh(script: 'mvn test -Dtest=!HelloControllerTest')
-	      sh('mvn install -Dmaven.test.skip=true')
+	      sh('mvn install -DskipTests')
         echo 'Functional Test...'
 		     }
    } 
