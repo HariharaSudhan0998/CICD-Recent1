@@ -56,7 +56,7 @@ pipeline {
      stage('Functional Test') {
      steps {       	
 	   //  sh(script: 'mvn test -Dtest=!HelloControllerTest')
-	      sh('mvn install ')
+	      sh('mvn install -Dtest=!HelloControllerTest+HelloControllerIT')
         echo 'Functional Test...'
 		     }
    } 
