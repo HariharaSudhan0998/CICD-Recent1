@@ -11,11 +11,11 @@ public class SeleniumTest {
 
     @Test
   
-    public void OpenBrowser()  {
+        public void OpenBrowser()  {
         WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
         ChromeOptions options = new ChromeOptions();       
-         WebDriver driver = new ChromeDriver();
+         driver = new ChromeDriver();
 //        options.addArguments("headless");
 options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
        
