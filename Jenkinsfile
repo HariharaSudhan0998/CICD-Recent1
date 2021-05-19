@@ -73,9 +73,8 @@ pipeline {
      }
    }  
       stage('Smoke Test') {
-      steps {       		
-	     
-	    // sh 'curl http://65.2.108.33:8080'
+      steps {       			     
+	     sh 'curl http://65.1.231.149/:8080'
         echo 'Smoke Test...'
 		     }
    } 
