@@ -32,7 +32,7 @@ pipeline {
         echo 'Code Quality...'
 	}
    }*/
-    stage('Artifact Push') {
+/*    stage('Artifact Push') {
      steps {	          
 	   //  sh(script: 'mvn  -version')
              sh(script: 'mvn   deploy -Dtest=!SeleniumTest')
@@ -52,7 +52,7 @@ pipeline {
 		       	  
                        echo 'Deploy to dev...'
         }
-   }
+   }*/
      stage('Functional Test') {
      steps {       		   
 	    //  sh('mvn install -Dmaven.test.skip=true')
