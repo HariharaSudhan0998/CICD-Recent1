@@ -18,7 +18,7 @@ public class SeleniumTest {
         //WebDriver driver =new FirefoxDriver();
          WebDriver driver = new ChromeDriver();
 //        options.addArguments("headless");
-options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+//options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
        
         //driver = new ChromeDriver(options);
         //driver.get("https://www.google.com");
