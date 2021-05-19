@@ -10,8 +10,8 @@ public class SeleniumTest {
 
 
     @Test
-    public static void main(String[] args) {
-    //public void OpenBrowser()  {
+  //  public static void main(String[] args) {
+    public void OpenBrowser()  {
        // WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
        // ChromeOptions options = new ChromeOptions();
