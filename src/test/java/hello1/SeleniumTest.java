@@ -4,28 +4,27 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class SeleniumTest {
 
 
     @Test
-  //  public static void main(String[] args) {
+  
     public void OpenBrowser()  {
-       // WebDriver driver;
+        WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-       // ChromeOptions options = new ChromeOptions();
-        //WebDriver driver =new FirefoxDriver();
+        ChromeOptions options = new ChromeOptions();       
          WebDriver driver = new ChromeDriver();
 //        options.addArguments("headless");
-//options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
+options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors","--disable-extensions","--no-sandbox","--disable-dev-shm-usage");
        
-        //driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
         //driver.get("https://www.google.com");
         driver.get("http://flogile.com/");
        //driver.get("http://65.2.108.33:8080/");
-       // System.out.println(driver.getTitle());
-       // Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Flogile Technologies"));
+        System.out.println(driver.getTitle());
+        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Flogile Technologies"));
         // Assert.assertTrue("Page title is not correct",driver.getTitle().equals("65.2.108.33"));
         //Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
     }
