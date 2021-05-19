@@ -4,12 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework</groupId>
     <artifactId>gs-spring-boot</artifactId>
-    <version>1.0.18</version>
-     <version>1.1.0</version>
-    
-    
-					
-
+    <version>1.0.19</version>
+   
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
