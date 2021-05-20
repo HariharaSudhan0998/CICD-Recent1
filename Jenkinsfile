@@ -18,20 +18,20 @@ pipeline {
         echo 'Unit Test...'
      }
    } 
-   /* stage('Code Quality') {
+    stage('Code Quality') {
      steps {	    	    
            withSonarQubeEnv('sonarqube') {
 		     sh """ 		        
-                        mvn sonar:sonar \
-                        -Dsonar.projectKey=sonar \
-                        -Dsonar.host.url=http://65.2.108.33:9000 \
+                       mvn sonar:sonar \
+	               -Dsonar.projectKey=sonarqube \
+		       -Dsonar.host.url=http://65.2.108.33:9000 \
                          
                        """ 
 		        } 
         
         echo 'Code Quality...'
 	}
-   }*/
+   }
 /*    stage('Artifact Push') {
      steps {	          
 	   //  sh(script: 'mvn  -version')
