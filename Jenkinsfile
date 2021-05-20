@@ -39,7 +39,7 @@ pipeline {
 	     
         echo 'Artifact Push...'
      }
-   }
+   }*/
    stage('Deploy to Test') {
 	      steps{
 		      
@@ -52,7 +52,7 @@ pipeline {
 		       	  
                        echo 'Deploy to dev...'
         }
-   }*/
+   }
      stage('Functional Test') {
      steps {       		   
 	    //  sh('mvn install -Dmaven.test.skip=true')
