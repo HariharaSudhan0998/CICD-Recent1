@@ -33,12 +33,9 @@ public class HelloControllerIT {
     }
 
     @Test
-      public void getHello() throws Exception {
+    public void getHello() throws Exception {
         ResponseEntity<String> response = template.getForEntity(base.toString(),
                 String.class);
-        assertThat(response.getBody(), equalTo(" Welcome to Flogile Technologies all!"));
-        
+        assertThat(response.getBody(), equalTo(" Welcome to Flogile Technologies all!!"));
     }
-    
-  
 }
