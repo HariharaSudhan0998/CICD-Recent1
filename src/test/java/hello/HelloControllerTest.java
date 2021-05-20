@@ -14,10 +14,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-
-
-
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -30,11 +26,6 @@ public class HelloControllerTest {
     public void getHello() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo(" Welcome to Flogile Technologies all!")));
-                 
+                .andExpect(content().string(equalTo(" Welcome to Flogile Technologies all!!")));
     }
-    
-   
-
-
 }
