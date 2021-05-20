@@ -30,7 +30,7 @@ public class HelloControllerTest {
     public void getHello() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string(equalTo(" Welcome to Flogile Technologies all hello!")));
+                .andExpect(content().string(equalTo(" Welcome to Flogile Technologies all!")));
                  
     }
     
