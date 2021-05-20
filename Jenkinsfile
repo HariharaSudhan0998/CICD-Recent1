@@ -11,11 +11,9 @@ pipeline {
    }
     stage('Unit Test') {
      steps {
-        sh(script: 'mvn test -Dtest=!SeleniumTest ')
-	    
+        sh(script: 'mvn test -Dtest=!SeleniumTest ')	    
 	//sh(script: 'mvn package')
 	 junit 'target/surefire-reports/*.xml'
-
         echo 'Unit Test...'
      }
    } 
