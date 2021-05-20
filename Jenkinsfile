@@ -56,7 +56,8 @@ pipeline {
      stage('Functional Test') {
      steps {       		   
 	    //  sh('mvn install -Dmaven.test.skip=true')
-	      sh(' mvn test -Dtest=SeleniumTest')
+	      sh(' mvn test ')
+	    // -Dtest=SeleniumTest
         echo 'Functional Test...'
 		     }
    } 
