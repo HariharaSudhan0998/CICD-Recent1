@@ -60,8 +60,8 @@ pipeline {
         echo 'Functional Test...'
 		     }
    } 
-     stage('Deploy to Production') {
-    /* steps {	
+  /*   stage('Deploy to Production') {
+       steps {	
 	     script {
              sshagent (credentials:['productionserver']) { 
 	     sh 'ssh -o StrictHostKeyChecking=no ec2-user@172.31.5.139 "killall -9 java; rm -rf gs-spring-boot-1.0.1.jar; ls -ltr; ps -ef |grep java ; wget http://65.1.231.149:8081/repository/spring-boot1/org/springframework/gs-spring-boot/1.0.1/gs-spring-boot-1.0.1.jar;"'		
@@ -70,13 +70,13 @@ pipeline {
   }
 				    
         echo 'Deploy to Production...'
-     }*/
+     }
    }  
       stage('Smoke Test') {
       steps {       			     
-	    // sh ('curl http://65.1.231.149:8080')
+	    sh ('curl http://65.1.231.149:8080')
         echo 'Smoke Test...'
 		     }
-   } 
+   } */
   }
 }
