@@ -5,8 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-//import org.testing.Assert;
-import org.testing.annotations.test;
+
 
 public class SeleniumTest {
 
@@ -27,6 +26,7 @@ options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","-
         //Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
         // Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Flogile Technologies"));
         //Assert.assertTrue("Page title is not correct",driver.getTitle().equals("http://65.2.108.33:8080/"));
+        System.out.println("Title is + my_title");
         String expected_title="Welcome to flogile Technologies";
         Assert.assertEquals(my_title,expected_title);
         System.out.println("Test Passed");
