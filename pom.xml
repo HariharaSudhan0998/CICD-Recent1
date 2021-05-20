@@ -25,11 +25,7 @@
         <!-- end::actuator[] -->
 
         <!-- tag::tests[] -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+        
         <!-- end::tests[] -->
 	    <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -70,7 +66,7 @@
                 <executions>
                     <execution>
                         <goals>
-                            
+                            <goal>integration-test</goal>
                             <goal>verify</goal>
                         </goals>
                     </execution>
