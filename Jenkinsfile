@@ -11,8 +11,8 @@ pipeline {
    }
     stage('Unit Test') {
      steps {
-        sh(script: 'mvn test ')
-	    // -Dtest=!SeleniumTest
+        sh(script: 'mvn test -Dtest=!SeleniumTest ')
+	    
 	//sh(script: 'mvn package')
 	 junit 'target/surefire-reports/*.xml'
 
@@ -36,8 +36,7 @@ pipeline {
     stage('Artifact Push') {
      steps {	          
 	   //  sh(script: 'mvn  -version')
-             sh(script: 'mvn   deploy ')
-	     //-Dtest=!SeleniumTest
+             sh(script: 'mvn   deploy -Dtest=!SeleniumTest ')
         echo 'Artifact Push...'
      }
    }
