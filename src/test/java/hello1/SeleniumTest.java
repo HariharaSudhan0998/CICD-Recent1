@@ -24,6 +24,7 @@ options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","-
         //Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Google"));
          Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Flogile Technologies"));
         //Assert.assertTrue("Page title is not correct",driver.getTitle().equals("http://65.2.108.33:8080/"));
+        System.out.println("Test Passed");
     }
 
 
