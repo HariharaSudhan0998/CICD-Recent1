@@ -32,14 +32,14 @@ pipeline {
         echo 'Code Quality...'
 	}
    }
-/*    stage('Artifact Push') {
+    stage('Artifact Push') {
      steps {	          
 	   //  sh(script: 'mvn  -version')
              sh(script: 'mvn   deploy -Dtest=!SeleniumTest')
 	     
         echo 'Artifact Push...'
      }
-   }*/
+   }
    stage('Deploy to Test') {
 	      steps{
 		      
@@ -60,7 +60,7 @@ pipeline {
         echo 'Functional Test...'
 		     }
    } 
-  /*   stage('Deploy to Production') {
+     stage('Deploy to Production') {
        steps {	
 	     script {
              sshagent (credentials:['productionserver']) { 
@@ -77,6 +77,6 @@ pipeline {
 	    sh ('curl http://65.1.231.149:8080')
         echo 'Smoke Test...'
 		     }
-   } */
+   } 
   }
 }
