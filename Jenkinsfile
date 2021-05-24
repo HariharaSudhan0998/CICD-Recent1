@@ -34,7 +34,8 @@ pipeline {
     stage('Artifact Push') {
      steps {	          
 	   //  sh(script: 'mvn  -version')-Dtest=!SeleniumTest
-             sh(script: 'mvn deploy -Drevision=01 -Dtest=!SeleniumTest')
+             sh(script: 'mvn deploy  -Dtest=!SeleniumTest')
+	     sh('mvn clean package -Drevision=01')
         echo 'Artifact Push...'
      }
    }
